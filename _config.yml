@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Coder Arya的个人博客
-subtitle: 愿我们心里都住着一只龙猫
-description:
+title: Arya's Blog
+subtitle: 
+description: 愿我们心里都住着一只龙猫
 keywords:
-author: Coder Arya
+author: Arya
 language: zh-CN
 timezone:
 
@@ -35,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -54,7 +54,7 @@ index_generator:
   order_by: -date
   
 # Category & Tag
-default_category: uncategorized
+default_category: 日常
 category_map:
 tag_map:
 
