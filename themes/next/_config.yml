@@ -283,7 +283,7 @@ chat:
 # ---------------------------------------------------------------
 
 # Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
+scroll_to_more: false
 
 # Automatically saving scroll position on each post / page in cookies.
 save_scroll: false
@@ -320,7 +320,7 @@ symbols_count_time:
   wpm: 275
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
-tag_icon: false
+tag_icon: true
 
 # Wechat Subscriber
 wechat_subscriber:
@@ -406,7 +406,7 @@ cheers: true
 # TagCloud settings for tags page.
 tagcloud:
   # If true, font size, font color and amount of tags can be customized
-  enable: false
+  enable: true
   # All values below are same as default, change them by yourself
   min: 12 # Minimun font size in px
   max: 30 # Maxium font size in px
