@@ -18,7 +18,7 @@ tags:
 - 服务器时区异常
 - jdk时区异常
 
-使用`Date`命令查看服务器时间正常，所以答案就是jdk时区异常。但是由于是用docker创建的jdk容器，所以最简单解决问题的办法就是jar包运行时加上时区参数。
+使用`date`命令查看服务器时间正常，所以答案就是jdk时区异常。但是由于是用docker创建的jdk容器，所以最简单解决问题的办法就是jar包运行时加上时区参数。
 
 ```java
 java -Duser.timezone=GMT+08 -jar app.jar
