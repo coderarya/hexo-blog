@@ -24,10 +24,8 @@
     lang: '{{ theme.valine.language }}' || 'zh-cn'
   });
   
-  var infoEle = document.querySelector('#comments .info');
-  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
-    infoEle.childNodes.forEach(function(item) {
-      item.parentNode.removeChild(item);
-    });
-  }
+  //去掉powered by
+  window.onload = function () {
+	document.querySelector('#comments .info').style.display = "none";
+  };
 </script>

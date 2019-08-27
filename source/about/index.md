@@ -8,6 +8,8 @@ type: about
 
 {% img /uploads/avatar.jpg %}
 
+
+
 > 90后，IT男，研究生在读。
 >
 > 兴趣：读书，电影，音乐，lol，学习^_^。
