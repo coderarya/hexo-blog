@@ -81,3 +81,11 @@ deploy:
   type: git
   repo: https://github.com/coderarya/coderarya.github.io.git
   branch: master
+
+# local search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+

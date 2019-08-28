@@ -26,6 +26,9 @@
   
   //去掉powered by
   window.onload = function () {
-	document.querySelector('#comments .info').style.display = "none";
+	var info = document.querySelector('#comments .info');
+	if (info) {
+		info.style.display = "none";
+	}
   };
 </script>
