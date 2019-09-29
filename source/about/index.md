@@ -4,7 +4,7 @@ date: 2019-07-18 15:05:31
 type: about
 ---
 
-{% cq %} 愿历尽千帆，归来仍少年。 {% endcq %}
+{% cq %} 相与枕藉乎舟中，不知东方之既白。 {% endcq %}
 
 {% img /uploads/avatar.jpg %}
 

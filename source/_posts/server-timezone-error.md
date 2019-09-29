@@ -28,17 +28,16 @@ java -Duser.timezone=GMT+08 -jar app.jar
 最后顺便总结一下常见的时区。
 
 > - GMT(Greenwich Mean Time)，格林威治标准时。英国伦敦郊区的皇家格林尼治天文台的标准时间，也就是本初子午线（0度经线）的当地时间。
->
-> - UTC(Universal Time Coordinated)，协调世界时，又称世界标准时间。比GMT更精准，一般可把两者视为相同。
->
-> - CST。CST可视为美国、澳大利亚、古巴或中国的标准时间。CST是如下4个不同的时区的缩写：
->
->   美国中部时间：Central Standard Time (USA) UT-6:00
->
->   澳大利亚中部时间：Central Standard Time (Australia) UT+9:30
->
->   中国标准时间：China Standard Time UT+8:00
->
->   古巴标准时间：Cuba Standard Time UT-4:00
+>- UTC(Universal Time Coordinated)，协调世界时，又称世界标准时间。比GMT更精准，一般可把两者视为相同。
+> - CTT(China Taiwan Time)，中国台湾时间。CTT=GMT+08，和北京时间一致。
+>- CST。CST可视为美国、澳大利亚、古巴或中国的标准时间。CST是如下4个不同的时区的缩写：
+> 
+>美国中部时间：Central Standard Time (USA) UT-6:00
+>   
+>澳大利亚中部时间：Central Standard Time (Australia) UT+9:30
+>   
+>中国标准时间：China Standard Time UT+8:00
+>   
+>古巴标准时间：Cuba Standard Time UT-4:00
 
-所以为了表示中国标准时间，一般还是使用GMT+08比较好，使用CST可能会造成混淆。
+所以为了表示中国标准时间，一般使用CTT或者GMT+08，使用CST可能会造成混淆。
