@@ -1,6 +1,6 @@
 ---
 title: NexT主题配置踩坑
-categories: 日常
+categories: 踩坑
 date: 2019-08-29 15:13:24
 tags:
 - next

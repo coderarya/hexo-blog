@@ -1,6 +1,6 @@
 ---
 title: 无法阻止表单提交
-categories: 日常
+categories: 踩坑
 date: 2019-11-27 16:14:18
 tags:
 - 表单默认提交
@@ -20,8 +20,8 @@ tags:
 ```java
 @PostMapping("/login")
 public @ResponseBody String login(String username, String password) {
-    if (username.equals("arya")) {
-        if (password.equals("123456")) {
+    if ("arya".equals(username)) {
+        if ("123456".equals(password)) {
             return "login success";
         } else {
             return "password error";
@@ -62,7 +62,7 @@ public @ResponseBody String login(String username, String password) {
 - 如果form标签不写action和method属性，则会默认以get方式提交到当前地址栏的url。
 - button标签的type取值可以为：button，submit，reset，默认为submit。
 
-而如果我们想在提交表单数据之前对输入域做一个判断，限制不完整的表单无法提交时，可以在form标签中添加一个提交表单事件的处理函数`<form action="/login" method="post" onSubmit="login()">`。js代码如下：
+而如果我们想在提交表单数据之前对输入域做一个判断，限制不完整的表单进行提交时，可以在form标签中添加一个提交表单事件的处理函数`<form action="/login" method="post" onSubmit="login()">`。js代码如下：
 
 ```js
 function login() {
@@ -105,9 +105,27 @@ function login() {
 
 2. event.preventDefault()
 
-form表单写为`<form action="/login" method="post" onSubmit="login(event)">`。login函数增加一个事件event参数，并添加一行代码`event.preventDefault();`。
+form表单写为`<form action="/login" method="post" onSubmit="login(event)">`，为login函数增加一个event事件参数。login函数的代码如下：
 
-使用这个方法可以阻止事件的默认行为，所以添加这行代码后，无论返回true还是false都不会再自动提交表单，所以需要我们手动写ajax请求来提交表单数据。这时可以删除form标签的action和method等属性了。
+```js
+function login(e) {
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+            
+    if (username.value === null || username.value === '') {
+        alert("username cannot be empty");
+        e.preventDefault();   //阻止表单默认提交的行为
+        return;
+    }
+
+    if (password.value === null || password.value === '') {
+        alert("password cannot be empty");
+        e.preventDefault();   //阻止表单默认提交的行为
+    }
+}
+```
+
+当检查输入域不满足条件时提示用户，并通过event.preventDefault()来阻止表单的默认提交。当满足条件时执行提交事件。
 
 3. type="button"
 

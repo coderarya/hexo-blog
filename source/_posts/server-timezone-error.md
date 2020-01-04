@@ -1,7 +1,7 @@
 ---
 title: 部署项目至服务器时的时区问题
 categories: 
-- 运维
+- 踩坑
 date: 2019-07-20 16:39:40
 tags: 
 - docker

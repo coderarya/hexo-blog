@@ -54,7 +54,7 @@ index_generator:
   order_by: -date
   
 # Category & Tag
-default_category: 日常
+default_category: 踩坑
 category_map:
 tag_map:
 
